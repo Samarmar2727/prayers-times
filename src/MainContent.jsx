@@ -7,7 +7,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import Prayers from "./prayer";
+import Prayers from "./Prayer";
 
 export default function MainContent() {
   const [city, setCity] = React.useState("Cairo");
@@ -130,10 +130,18 @@ export default function MainContent() {
 
       {timings && !loading && (
         <Stack direction="row" spacing={2} style={{ marginTop: "50px" }}>
-          <Prayers name="الفجر" time={timings.Fajr} image="./pics/fajr (1).jpg" />
+          <Prayers
+            name="الفجر"
+            time={timings.Fajr}
+            image="./pics/fajr (1).jpg"
+          />
           <Prayers name="الظهر" time={timings.Dhuhr} image="./pics/dohr.jpg" />
           <Prayers name="العصر" time={timings.Asr} image="./pics/asar.jpg" />
-          <Prayers name="المغرب" time={timings.Maghrib} image="./pics/megreb.jpg" />
+          <Prayers
+            name="المغرب"
+            time={timings.Maghrib}
+            image="./pics/megreb.jpg"
+          />
           <Prayers name="العشاء" time={timings.Isha} image="./pics/ashaa.jpg" />
         </Stack>
       )}
